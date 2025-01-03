@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Region 8 GCP Map</title>
+
+    <!-- CSS only -->
+    <link href="libs/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="libs/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="libs/jquery.js"></script>
+
+    <script src="libs/v6.13.0-dist/ol.js"></script>
+    <link rel="stylesheet" href="libs/v6.13.0-dist/ol.css">
+
+
+
+
+    <script src="libs/ol-layerswitcher-master/dist/ol-layerswitcher.js"></script>
+    <link rel="stylesheet" href="libs/ol-layerswitcher-master/dist/ol-layerswitcher.css" />
+
+
+
+    <script src="libs/ol-popup/ol-popup.js"></script>
+    <link rel="stylesheet" href="libs/ol-popup/ol-popup.css" />
+
+
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="map" class="map">
+
+        <div id="scale_bar"></div>
+        <button onclick="info()" type="button" id="info_btn" class="btn btn-success btn-sm">☰ Activate GetInfo</button>
+        <div id="legend" style="display: none;"></div>
+        <button id="legend_toggle">☰ Show Legend</button>
+
+
+    </div>
+    <div id="query_tab">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist" style="font-size:14px;">
+                <button class="nav-link active" id="nav-attributes-tab" data-bs-toggle="tab" data-bs-target="#nav-attributes" type="button" role="tab" aria-controls="nav-attributes" aria-selected="true">Select by Attributes</button>
+                <button class="nav-link" id="nav-draw-tab" data-bs-toggle="tab" data-bs-target="#nav-draw" type="button" role="tab" aria-controls="nav-draw" aria-selected="false">Select by Draw</button>
+            </div>
+        </nav>
+
+
+        </div>
+
+    </div>
+
+
+    <div id="table_data" style="font-size:15px;"></div>
+    <!-- Scrollable modal -->
+
+    <div class="modal fade" id="wms_layers_window" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Available WMS Layers</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table id="table_wms_layers" class="table table-hover" style="font-size:15px;">
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="close_wms_window()" type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    <button onclick="add_layer()" type="button" id="add_map_btn" class="btn btn-primary btn-sm">Add Layer to Map</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="map.js"></script>
+
+</body>
+
+</html>

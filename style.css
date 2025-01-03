@@ -1,0 +1,256 @@
+ html,
+ body {
+     height: 100%;
+     padding: 0;
+     margin: 0;
+     font-family: arial;
+
+ }
+
+ #map {
+     position: absolute;
+     left: 0%;
+     width: 100%;
+     height: 100%;
+     //  border-style: solid;
+     // border-color: black;
+     // border-width: thin;
+
+ }
+
+ #query_tab {
+     position: absolute;
+     padding: 0.5% 0%;
+     left: 0%;
+     width: 0%;
+     height: 100%;
+     //border-style: solid;
+     //border-color: black;
+     //border-width: thin;
+     visibility: hidden;
+     //overflow: scroll;
+
+ }
+
+ #legend {
+    z-index: 11;
+    border: 2px solid grey;
+    position: absolute;
+    bottom: 70px;
+    height: 40%;
+    width:13%; 
+    right: 0.5%;
+    background-color: #ffffff;
+    font-weight: bold;
+  }
+
+#legend_toggle {
+    z-index: 11;
+    border: 2px solid grey;
+    position: absolute;
+    top: 323px;
+    height: 5.5%;
+    width:10%; 
+    right: 1%;
+    background-color: #ffffff;
+    font-weight: bold;
+
+}
+
+ #layer {
+     position: relative;
+     width: 85%;
+ }
+
+ #attributes {
+     position: relative;
+     width: 85%;
+ }
+
+ #operator {
+     position: relative;
+     width: 85%;
+ }
+
+ #value {
+     position: relative;
+     width: 85%;
+ }
+
+ #layer1 {
+     position: relative;
+     width: 85%;
+ }
+
+ #draw_type {
+     position: relative;
+     width: 85%;
+ }
+
+
+ #table_data {
+     position: absolute;
+     bottom: 0%;
+     overflow: scroll;
+     left: 0%;
+     right: 0%;
+     height: 0%;
+     border: 1px solid #4CAF50;
+ }
+
+ #table {
+     white-space: nowrap;
+     grid-template-areas: "head-fixed""body-scrollable";
+ }
+
+
+ #table th {
+     position: -webkit-sticky;
+     /* for Safari */
+     position: sticky;
+     top: 0px;
+     background-color: rgb(122, 209, 100);
+ }
+
+ #wms_layers_btn {
+     position: absolute;
+     z-index: 600;
+     top: 1%;
+     left: 30%;
+ }
+
+ #query_panel_btn {
+     position: absolute;
+     z-index: 600;
+     top: 1%;
+     left: 10%;
+ }
+
+ #legend_btn {
+     position: absolute;
+     z-index: 600;
+     bottom: 2%;
+     right: 0%;
+ }
+
+
+ #table_wms_layers {
+     white-space: nowrap;
+     grid-template-areas: "head-fixed""body-scrollable";
+ }
+
+ #table_wms_layers th {
+     position: -webkit-sticky;
+     /* for Safari */
+     position: sticky;
+     top: 0px;
+     background-color: rgb(122, 209, 100);
+ }
+
+
+ .modal-dialog {
+     max-width: 60% !important;
+     height: 60% !important;
+     top: 18% !important;
+
+
+ }
+
+ /*.form-select {
+     left: 0%;
+     width: 85% !important;
+
+ }*/
+
+ /*.form-control {
+     left: 0%;
+     width: 85% !important;
+
+ }*/
+
+
+
+
+ #info_btn {
+     position: absolute;
+     z-index: 500;
+     top: 1%;
+     right: 3%;
+
+
+ }
+
+ #scale_bar {
+
+     position: absolute;
+     z-index: 500;
+     bottom: 0%;
+     left: 3%;
+ }
+
+
+ .ol-popup-content {
+
+     max-width: 500px;
+ }
+
+ .ol-scale-step-text {
+     //color: red;
+ }
+
+ .ol-scale-text {
+     //color: red;
+     font-weight: bold;
+ }
+
+ .layer-switcher.shown {
+     max-height: 465px;
+ }
+
+ .ol-control button {
+     background-color: rgba(40, 40, 40, 0.8) !important;
+ }
+
+ .ol-control button:hover {
+     background-color: rgba(40, 40, 40, 1) !important;
+ }
+
+ .ol-mouse-position {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center alignment tweak */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    /* Background styling for better visibility */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white; /* Text color for contrast */
+    padding: 5px 10px; /* Add padding for spacing */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    white-space: nowrap; /* Prevent wrapping of text */
+
+}
+
+
+ .ol-zoom-extent {
+     top: 3.8em;
+     left: 0.5em;
+     position: absolute;
+ }
+
+ .ol-zoomslider {
+     top: 5.8em;
+     left: 0.5em;
+     position: absolute;
+     height: 200px;
+ }
+
+ .ol-geocoder.gcd-gl-container {
+     top: 21.875em;
+     left: 0.5em;
+     position: absolute;
+ }
+
+
